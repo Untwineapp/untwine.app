@@ -183,6 +183,9 @@ const AppFooter = ({ mode = 'light' }) => {
            Untwine is not therapy and is not a substitute for professional mental health care. If you are in crisis, please contact a mental health professional or crisis helpline. <br/>
            <a href="https://findahelpline.com/" target="_blank" rel="noopener noreferrer" className="underline font-bold hover:text-[#9FAF95] transition-colors mt-1 inline-block">https://findahelpline.com/</a>
          </p>
+         <p className="text-xs text-white/40 mt-4 font-light">
+           You can find us on social media: Untwine.app
+         </p>
       </footer>
     );
   }
@@ -205,6 +208,9 @@ const AppFooter = ({ mode = 'light' }) => {
       <div className="border-t border-[#2F3A32]/5 pt-8 text-center">
          <p className="text-xs text-[#6F7A6A]/60 max-w-2xl mx-auto leading-relaxed">
            Untwine is not therapy and is not a substitute for professional mental health care. If you are in crisis, please contact a mental health professional or crisis helpline.
+         </p>
+         <p className="text-xs text-[#6F7A6A]/40 mt-4 font-light">
+           You can find us on social media: Untwine.app
          </p>
       </div>
     </footer>
@@ -623,7 +629,7 @@ const SettingsModal = ({ lang, setLang, onClose, onClear, history, onOpenPrivacy
         
         <div className="flex justify-between items-center mb-8 shrink-0">
           <div className="flex items-center space-x-3">
-            <img src="image1-removebg-preview.png" alt="Untwine" className="w-12 h-12 object-contain" />
+            <img src="image1-removebg-preview.png" alt="Untwine" className="w-14 h-14 object-contain" />
             <h2 className="text-[#E6E8E2] text-xl font-bold">{t('common.settings')}</h2>
           </div>
           <button onClick={onClose}><X className="text-[#6F7A6A]" /></button>
@@ -654,6 +660,9 @@ const SettingsModal = ({ lang, setLang, onClose, onClear, history, onOpenPrivacy
                <br/><br/>
                Contact us at <a href="mailto:contact@untwine.app" className="hover:text-[#9FAF95] transition-colors">contact@untwine.app</a>
              </p>
+             <p className="text-xs text-white/40 mt-4 font-light">
+               You can find us on social media: Untwine.app
+             </p>
           </div>
         </div>
       </div>
@@ -674,14 +683,14 @@ const Dashboard = ({ lang, setView, openSettings }) => {
   return (
     <div className="h-full flex flex-col p-6 animate-fade-in max-w-2xl mx-auto w-full">
       <header className="flex justify-between items-center mb-8 pt-2 shrink-0">
-        <div className="flex items-center space-x-3"><img src="image1-removebg-preview.png" alt="Untwine" className="w-14 h-14 object-contain" /><span className="text-[#E6E8E2] text-lg font-medium tracking-wide">Untwine</span></div>
+        <div className="flex items-center space-x-3"><img src="image1-removebg-preview.png" alt="Untwine" className="w-16 h-16 object-contain" /><span className="text-[#E6E8E2] text-lg font-medium tracking-wide">Untwine</span></div>
         <button onClick={openSettings} className="p-2 text-[#6F7A6A] hover:text-[#9FAF95] transition-colors"><Settings size={22} /></button>
       </header>
       <main className="flex-1 flex flex-col space-y-4 overflow-y-auto custom-scrollbar pb-6 no-scrollbar">
         {modes.map((mode) => (
-          <button key={mode.id} onClick={() => setView(mode.id)} className={`w-full p-6 rounded-2xl flex items-center justify-between group transition-all duration-300 touch-manipulation min-h-[5rem] flex-shrink-0 ${mode.primary ? 'bg-[#3A453D] border-2 border-[#9FAF95]/20 shadow-lg' : 'bg-[#3A453D]/50 border border-transparent hover:bg-[#3A453D]'}`}>
-            <div className="flex items-center"><div className={`p-3 rounded-full ${dir === 'rtl' ? 'ml-4' : 'mr-4'} ${mode.primary ? 'bg-[#9FAF95]/20 text-[#9FAF95]' : 'bg-[#2F3A32] text-[#6F7A6A] group-hover:text-[#9FAF95]'}`}><mode.icon size={24} /></div><span className={`text-lg font-medium ${mode.primary ? 'text-[#E6E8E2]' : 'text-[#E6E8E2]/80'}`}>{mode.label}</span></div>
-            {dir === 'rtl' ? (<ArrowRight size={20} className={`transform rotate-180 transition-transform group-hover:-translate-x-1 ${mode.primary ? 'text-[#9FAF95]' : 'text-[#6F7A6A]'}`} />) : (<ArrowRight size={20} className={`transform transition-transform group-hover:translate-x-1 ${mode.primary ? 'text-[#9FAF95]' : 'text-[#6F7A6A]'}`} />)}
+          <button key={mode.id} onClick={() => setView(mode.id)} className={`w-full p-6 rounded-2xl flex items-center justify-between group transition-all duration-300 touch-manipulation min-h-[5rem] flex-shrink-0 bg-[#3A453D]/50 border border-transparent hover:bg-[#3A453D]`}>
+            <div className="flex items-center"><div className={`p-3 rounded-full ${dir === 'rtl' ? 'ml-4' : 'mr-4'} bg-[#2F3A32] text-[#6F7A6A] group-hover:text-[#9FAF95]`}><mode.icon size={24} /></div><span className={`text-lg font-medium text-[#E6E8E2]/80`}>{mode.label}</span></div>
+            {dir === 'rtl' ? (<ArrowRight size={20} className={`transform rotate-180 transition-transform group-hover:-translate-x-1 text-[#6F7A6A]`} />) : (<ArrowRight size={20} className={`transform transition-transform group-hover:translate-x-1 text-[#6F7A6A]`} />)}
           </button>
         ))}
         <AppFooter mode="dark" />
