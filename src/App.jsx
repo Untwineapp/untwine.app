@@ -209,7 +209,7 @@ const AppFooter = ({ mode = 'light' }) => {
          <p className="text-xs text-[#6F7A6A]/60 max-w-2xl mx-auto leading-relaxed">
            Untwine is not therapy and is not a substitute for professional mental health care. If you are in crisis, please contact a mental health professional or crisis helpline.
          </p>
-         <p className="text-xs text-[#6F7A6A]/40 mt-4 font-light">
+         <p className="text-xs text-[#6F7A6A]/60 mt-4">
            You can find us on social media: Untwine.app
          </p>
       </div>
@@ -660,7 +660,7 @@ const SettingsModal = ({ lang, setLang, onClose, onClear, history, onOpenPrivacy
                <br/><br/>
                Contact us at <a href="mailto:contact@untwine.app" className="hover:text-[#9FAF95] transition-colors">contact@untwine.app</a>
              </p>
-             <p className="text-xs text-white/40 mt-4 font-light">
+             <p className="text-xs text-[#9FAF95]/80 mt-6 font-medium tracking-wide">
                You can find us on social media: Untwine.app
              </p>
           </div>
@@ -675,7 +675,7 @@ const Dashboard = ({ lang, setView, openSettings }) => {
   const dir = t('dir');
   const modes = [
     { id: 'calm', label: t('modes.calm'), icon: Wind },
-    { id: 'stop', label: t('modes.stop'), icon: Brain }, // Primary flag removed to fix inconsistent visual
+    { id: 'stop', label: t('modes.stop'), icon: Brain }, 
     { id: 'decide', label: t('modes.decide'), icon: HelpCircle },
     { id: 'ground', label: t('modes.ground'), icon: Anchor },
   ];
@@ -742,7 +742,7 @@ export default function UntwineApp() {
       `}</style>
       
       {isLanding ? (
-        <div className="w-full h-full overflow-y-auto no-scrollbar"><WebsiteLanding onEnter={enterApp} /></div>
+        <div className="w-full h-full overflow-y-auto"><WebsiteLanding onEnter={enterApp} /></div>
       ) : (
         <div className="w-full h-full relative shadow-2xl bg-[#2F3A32] overflow-hidden transition-all duration-300">
           {view === 'home' && <Dashboard lang={lang} setView={setView} openSettings={() => setShowSettings(true)} />}
