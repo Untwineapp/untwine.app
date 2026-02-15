@@ -8,12 +8,6 @@ import {
 
 /**
  * UNTWINE - Privacy-First Mental Reset App
- * * Core Philosophy:
- * - Offline-first
- * - Local-only storage
- * - No tracking, no accounts
- * - Calm, non-clinical tone
- * - Global Accessibility (25+ Languages)
  */
 
 // --- Assets & Constants ---
@@ -67,236 +61,29 @@ const PRIVACY_CONTENT = {
     "Utilizamos cero (0) scripts de rastreo de terceros.\n\n• Sin Google Analytics.\n• Sin Facebook Pixels.\n• Sin SDK de publicidad.\n\nEl único enlace externo en la aplicación es a findahelpline.com. Si hace clic en ese enlace, está sujeto a su política de privacidad.",
     "Si tiene preguntas o sugerencias, puede comunicarse con nosotros en: contact@untwine.app"
   ),
-  fr: createPrivacy(
-    "Politique de Confidentialité",
-    "Untwine repose sur un principe simple : votre espace mental est privé. Pas de base de données cloud. Pas de compte requis.\n\n\"Ce qui se passe sur votre téléphone reste sur votre téléphone.\"",
-    "Untwine utilise le stockage local. Tout est enregistré sur la mémoire interne de votre appareil. Aucune donnée ne quitte votre appareil.\n\nRisques importants :\n\n• Vider le cache du navigateur efface l'historique.\n• Le mode Incognito efface les données à la fermeture.\n• Si vous perdez votre téléphone, vous perdez vos données (sauf sauvegarde manuelle).",
-    "Pas de synchronisation cloud. Le transfert est manuel.\n\nExporter : Téléchargez un fichier JSON depuis les Paramètres.\n\nImporter : Restaurez l'historique en téléversant ce fichier.",
-    "Nous utilisons l'API de reconnaissance vocale de votre appareil. Les données vocales sont traitées localement. Nous n'enregistrons pas d'audio.",
-    "Untwine n'est pas un dispositif médical. C'est un outil d'auto-assistance.\n\nSituations de crise : Si vous êtes en danger, n'utilisez pas cette application. Appelez les urgences ou visitez https://findahelpline.com/.",
-    "Zéro (0) script de suivi.\n\n• Pas de Google Analytics.\n• Pas de pixels Facebook.\n• Pas de publicité.",
-    "Contact : contact@untwine.app"
-  ),
-  de: createPrivacy(
-    "Datenschutzerklärung",
-    "Untwine basiert auf einem einfachen Prinzip: Ihr geistiger Raum ist privat. Keine Cloud-Datenbank. Keine Konten erforderlich.\n\n\"Was auf Ihrem Handy passiert, bleibt auf Ihrem Handy.\"",
-    "Untwine nutzt lokalen Speicher. Alles wird direkt auf dem internen Speicher Ihres Geräts gesichert. Keine Daten verlassen Ihr Gerät.\n\nWichtige Risiken:\n\n• Das Löschen des Browser-Cache löscht Ihren Verlauf.\n• Der Inkognito-Modus löscht Daten beim Schließen.\n• Bei Verlust des Handys sind Daten verloren (ohne manuelles Backup).",
-    "Da wir nicht mit der Cloud synchronisieren, erfolgt die Datenübertragung manuell.\n\nExport: Laden Sie eine JSON-Datei in den Einstellungen herunter.\n\nImport: Stellen Sie den Verlauf durch Hochladen dieser Datei wieder her.",
-    "Wir nutzen die Spracherkennungs-API Ihres Geräts. Sprachdaten werden lokal verarbeitet. Wir zeichnen keine Audiodateien auf.",
-    "Untwine ist kein Medizinprodukt. Es ist ein Selbsthilfewerkzeug.\n\nKrisensituationen: Bei Gefahr nutzen Sie diese App nicht. Rufen Sie den Notruf oder besuchen Sie https://findahelpline.com/.",
-    "Wir verwenden null (0) Tracking-Skripte.\n\n• Kein Google Analytics.\n• Keine Werbung.",
-    "Kontakt: contact@untwine.app"
-  ),
-  it: createPrivacy(
-    "Informativa sulla Privacy",
-    "Il tuo spazio mentale è privato. Nessun database cloud. Nessun account richiesto.\n\n\"Ciò che accade nel tuo telefono, resta nel tuo telefono.\"",
-    "Untwine usa l'archiviazione locale. Tutto viene salvato nella memoria interna del dispositivo. Nessun dato lascia il dispositivo.\n\nRischi importanti:\n\n• Cancellare la cache del browser cancella la cronologia.\n• La modalità in incognito cancella i dati alla chiusura.\n• Se perdi il telefono, perdi i dati (senza backup manuale).",
-    "Nessuna sincronizzazione cloud. Il trasferimento dati è manuale.\n\nEsporta: Scarica un file JSON dalle Impostazioni.\n\nImporta: Ripristina la cronologia caricando quel file.",
-    "Usiamo l'API di riconoscimento vocale del dispositivo. I dati vocali sono elaborati localmente. Non registriamo audio.",
-    "Untwine non è un dispositivo medico. È uno strumento di auto-aiuto.\n\nSituazioni di crisi: Se sei in pericolo, non usare questa app. Chiama i soccorsi o visita https://findahelpline.com/.",
-    "Usiamo zero (0) script di tracciamento.\n\n• Niente Google Analytics.\n• Niente pubblicità.",
-    "Contatto: contact@untwine.app"
-  ),
-  pt: createPrivacy(
-    "Política de Privacidade",
-    "Seu espaço mental é privado. Sem banco de dados na nuvem. Sem contas.\n\n\"O que acontece no seu telefone, fica no seu telefone.\"",
-    "Usamos Armazenamento Local. Tudo é salvo na memória interna do dispositivo. Nenhum dado sai do seu aparelho.\n\nRiscos Importantes:\n\n• Limpar o cache apaga o histórico.\n• Modo Anônimo apaga dados ao fechar.\n• Se perder o telefone, perde os dados (sem backup manual).",
-    "Não sincronizamos com a nuvem.\n\nExportar: Baixe um arquivo JSON em Configurações.\n\nImportar: Restaure seu histórico enviando esse arquivo.",
-    "Usamos a API de reconhecimento de voz do dispositivo. O processamento é local. Não gravamos áudio.",
-    "Untwine não é um dispositivo médico. É uma ferramenta de autoajuda.\n\nCrise: Se estiver em perigo, não use este app. Ligue para a emergência ou acesse https://findahelpline.com/.",
-    "Zero (0) scripts de rastreamento.\n\n• Sem Google Analytics.\n• Sem anúncios.",
-    "Contato: contact@untwine.app"
-  ),
-  nl: createPrivacy(
-    "Privacybeleid",
-    "Uw mentale ruimte is privé. Geen cloud-database. Geen accounts vereist.\n\n\"Wat op uw telefoon gebeurt, blijft op uw telefoon.\"",
-    "Untwine gebruikt lokale opslag. Alles wordt direct op het geheugen van uw apparaat opgeslagen. Geen gegevens verlaten uw apparaat.\n\nBelangrijke risico's:\n\n• Cache wissen wist uw geschiedenis.\n• Incognito-modus wist gegevens bij sluiten.\n• Verlies van telefoon betekent verlies van gegevens (zonder back-up).",
-    "Geen cloudsynchronisatie.\n\nExporteren: Download een JSON-bestand via Instellingen.\n\nImporteren: Herstel uw geschiedenis door dat bestand te uploaden.",
-    "We gebruiken de spraakherkennings-API van uw apparaat. Spraakgegevens worden lokaal verwerkt. We nemen geen audio op.",
-    "Untwine is geen medisch hulpmiddel. Het is een zelfhulptool.\n\nCrisis: Gebruik deze app niet in nood. Bel de hulpdiensten of ga naar https://findahelpline.com/.",
-    "We gebruiken nul (0) tracking-scripts.\n\n• Geen Google Analytics.\n• Geen advertenties.",
-    "Contact: contact@untwine.app"
-  ),
-  sv: createPrivacy(
-    "Integritetspolicy",
-    "Ditt sinne är privat. Ingen molndatabas. Inga konton.\n\n\"Det som händer på din telefon, stannar på din telefon.\"",
-    "Vi använder lokal lagring. Allt sparas på enhetens internminne. Ingen data lämnar din enhet.\n\nRisker:\n\n• Att rensa webbläsarens cache raderar historiken.\n• Inkognitoläge raderar data vid stängning.\n• Förlorad telefon innebär förlorad data (utan backup).",
-    "Ingen molnsynkronisering.\n\nExportera: Ladda ner en JSON-fil från Inställningar.\n\nImportera: Återställ genom att ladda upp filen.",
-    "Vi använder enhetens röst-API. Röstdata behandlas lokalt. Vi spelar inte in ljud.",
-    "Untwine är inte en medicinteknisk produkt. Det är ett självhjälpsverktyg.\n\nKris: Använd inte denna app vid fara. Ring nödnummer eller besök https://findahelpline.com/.",
-    "Noll (0) spårningsskript.\n\n• Inga Google Analytics.\n• Inga annonser.",
-    "Kontakt: contact@untwine.app"
-  ),
-  pl: createPrivacy(
-    "Polityka Prywatności",
-    "Twój umysł jest prywatny. Brak bazy w chmurze. Brak kont.\n\n\"To, co dzieje się na telefonie, zostaje na telefonie.\"",
-    "Używamy Pamięci Lokalnej. Wszystko jest zapisywane w pamięci urządzenia. Żadne dane nie opuszczają urządzenia.\n\nRyzyka:\n\n• Wyczyszczenie pamięci podręcznej usuwa historię.\n• Tryb Incognito usuwa dane po zamknięciu.\n• Utrata telefonu to utrata danych (bez kopii zapasowej).",
-    "Brak synchronizacji z chmurą.\n\nEksport: Pobierz plik JSON z Ustawień.\n\nImport: Przywróć historię przesyłając ten plik.",
-    "Używamy API rozpoznawania mowy urządzenia. Dane głosowe przetwarzane są lokalnie. Nie nagrywamy dźwięku.",
-    "Untwine nie jest wyrobem medycznym. To narzędzie samopomocy.\n\nKryzys: W razie zagrożenia zadzwoń na pogotowie lub wejdź na https://findahelpline.com/.",
-    "Zero (0) skryptów śledzących.\n\n• Brak Google Analytics.\n• Brak reklam.",
-    "Kontakt: contact@untwine.app"
-  ),
-  el: createPrivacy(
-    "Πολιτική Απορρήτου",
-    "Το μυαλό σας είναι ιδιωτικό. Χωρίς βάση δεδομένων cloud. Χωρίς λογαριασμούς.\n\n\"Ό,τι συμβαίνει στο τηλέφωνό σας, μένει στο τηλέφωνό σας.\"",
-    "Χρησιμοποιούμε Τοπική Αποθήκευση. Όλα αποθηκεύονται στη μνήμη της συσκευής. Κανένα δεδομένο δεν φεύγει από τη συσκευή.\n\nΚίνδυνοι:\n\n• Η εκκαθάριση της cache διαγράφει το ιστορικό.\n• Η ανώνυμη περιήγηση διαγράφει τα δεδομένα κατά το κλείσιμο.\n• Η απώλεια τηλεφώνου σημαίνει απώλεια δεδομένων (χωρίς backup).",
-    "Δεν υπάρχει συγχρονισμός cloud.\n\nΕξαγωγή: Κατεβάστε ένα αρχείο JSON από τις Ρυθμίσεις.\n\nΕισαγωγή: Επαναφέρετε ανεβάζοντας αυτό το αρχείο.",
-    "Χρησιμοποιούμε το API αναγνώρισης φωνής της συσκευής. Η επεξεργασία γίνεται τοπικά. Δεν καταγράφουμε ήχο.",
-    "Το Untwine δεν είναι ιατρική συσκευή.\n\nΚρίση: Αν κινδυνεύετε, καλέστε βοήθεια ή επισκεφθείτε το https://findahelpline.com/.",
-    "Μηδέν (0) σενάρια παρακολούθησης.\n\n• Όχι Google Analytics.\n• Όχι διαφημίσεις.",
-    "Επικοινωνία: contact@untwine.app"
-  ),
-  tr: createPrivacy(
-    "Gizlilik Politikası",
-    "Zihniniz özeldir. Bulut veritabanı yok. Hesap yok.\n\n\"Telefonunuzda olan, telefonunuzda kalır.\"",
-    "Yerel Depolama kullanıyoruz. Her şey cihazınızın hafızasına kaydedilir. Hiçbir veri cihazdan çıkmaz.\n\nÖnemli Riskler:\n\n• Önbelleği temizlemek geçmişi siler.\n• Gizli mod, kapatıldığında verileri siler.\n• Telefonu kaybetmek verileri kaybetmek demektir (yedekleme yoksa).",
-    "Bulut senkronizasyonu yok.\n\nDışa Aktar: Ayarlar'dan bir JSON dosyası indirin.\n\nİçe Aktar: O dosyayı yükleyerek geri yükleyin.",
-    "Cihazınızın Konuşma Tanıma API'sini kullanıyoruz. Ses verileri yerel olarak işlenir. Ses kaydetmiyoruz.",
-    "Untwine tıbbi bir cihaz değildir. Kendi kendine yardım aracıdır.\n\nKriz: Tehlikedeyseniz acil servisleri arayın veya https://findahelpline.com/ adresini kullanın.",
-    "Sıfır (0) izleme komut dosyası.\n\n• Google Analytics yok.\n• Reklam yok.",
-    "İletişim: contact@untwine.app"
-  ),
-  ru: createPrivacy(
-    "Политика конфиденциальности",
-    "Ваше личное пространство неприкосновенно. Нет облачной базы данных. Нет аккаунтов.\n\n«Всё, что происходит в телефоне, остаётся в телефоне».",
-    "Мы используем Локальное хранилище. Всё сохраняется во внутренней памяти устройства. Данные не покидают устройство.\n\nРиски:\n\n• Очистка кэша браузера удаляет историю.\n• Режим Инкогнито удаляет данные при закрытии.\n• Потеря телефона означает потерю данных (без бэкапа).",
-    "Нет синхронизации с облаком.\n\nЭкспорт: Скачайте JSON-файл в Настройках.\n\nИмпорт: Восстановите историю, загрузив этот файл.",
-    "Используем API распознавания речи устройства. Обработка локальная. Мы не записываем аудио.",
-    "Untwine — не медицинское устройство. Это утилита для самопомощи.\n\nКризис: Если вы в опасности, звоните в экстренные службы или посетите https://findahelpline.com/.",
-    "Ноль (0) трекеров.\n\n• Нет Google Analytics.\n• Нет рекламы.",
-    "Контакты: contact@untwine.app"
-  ),
-  zh: createPrivacy(
-    "隐私政策",
-    "您的精神空间是私密的。无云端数据库。无需账户。\n\n“手机里发生的事，留在手机里。”",
-    "Untwine 使用本地存储。所有内容直接保存在设备内存中。没有数据离开您的设备。\n\n重要风险：\n\n• 清除浏览器缓存会删除历史记录。\n• 无痕模式会在关闭时删除数据。\n• 如果丢失手机，数据也会丢失（除非手动备份）。",
-    "无云端同步。\n\n导出：从设置下载 JSON 文件。\n\n导入：上传该文件以恢复历史记录。",
-    "我们使用设备的内置语音识别 API。语音数据在本地处理。我们不录制音频。",
-    "Untwine 不是医疗设备。它是自助工具。\n\n危机情况：如果您处于危险中，请致电急救服务或访问 https://findahelpline.com/。",
-    "零 (0) 追踪器。\n\n• 无 Google Analytics。\n• 无广告。",
-    "联系我们：contact@untwine.app"
-  ),
-  ja: createPrivacy(
-    "プライバシーポリシー",
-    "あなたの心はプライベートなものです。クラウドデータベースなし。アカウント不要。\n\n「スマホで起きたことは、スマホの中に。」",
-    "Untwineはローカルストレージを使用します。すべて端末の内部メモリに保存されます。データが端末外に出ることはありません。\n\n重要なリスク：\n\n• キャッシュを消去すると履歴が消えます。\n• シークレットモードは閉じるとデータを消去します。\n• スマホを紛失するとデータも失われます（手動バックアップがない場合）。",
-    "クラウド同期はありません。\n\nエクスポート：設定からJSONファイルをダウンロード。\n\nインポート：ファイルをアップロードして復元。",
-    "端末の音声認識APIを使用します。音声データはローカルで処理されます。録音はしません。",
-    "Untwineは医療機器ではありません。自助ツールです。\n\n危機的状況：危険を感じる場合は、救急サービスに連絡するか、https://findahelpline.com/ を利用してください。",
-    "トラッカー ゼロ (0)。\n\n• Google Analyticsなし。\n• 広告なし。",
-    "お問い合わせ：contact@untwine.app"
-  ),
-  ko: createPrivacy(
-    "개인정보 처리방침",
-    "당신의 마음은 사적인 것입니다. 클라우드 데이터베이스 없음. 계정 필요 없음.\n\n\"휴대전화에서 일어난 일은 휴대전화에 머무릅니다.\"",
-    "Untwine은 로컬 저장소를 사용합니다. 모든 내용은 기기 내부에 저장됩니다. 데이터가 기기를 떠나지 않습니다.\n\n중요한 위험:\n\n• 브라우저 캐시를 지우면 기록이 삭제됩니다.\n• 시크릿 모드는 닫을 때 데이터를 삭제합니다.\n• 휴대전화를 분실하면 데이터도 손실됩니다 (수동 백업 없이).",
-    "클라우드 동기화 없음.\n\n내보내기: 설정에서 JSON 파일을 다운로드하세요.\n\n가져오기: 파일을 업로드하여 복원하세요.",
-    "기기의 음성 인식 API를 사용합니다. 데이터는 로컬에서 처리됩니다. 오디오를 녹음하지 않습니다.",
-    "Untwine은 의료 기기가 아닙니다. 자가 도구입니다.\n\n위기 상황: 위험한 경우 응급 서비스에 전화하거나 https://findahelpline.com/을 이용하세요.",
-    "추적 스크립트 0개.\n\n• Google Analytics 없음.\n• 광고 없음.",
-    "문의: contact@untwine.app"
-  ),
-  vi: createPrivacy(
-    "Chính sách bảo mật",
-    "Tâm trí của bạn là riêng tư. Không có cơ sở dữ liệu đám mây. Không cần tài khoản.\n\n\"Những gì xảy ra trên điện thoại, ở lại trên điện thoại.\"",
-    "Chúng tôi sử dụng Lưu trữ Cục bộ. Mọi thứ được lưu vào bộ nhớ thiết bị. Không dữ liệu nào rời khỏi thiết bị.\n\nRủi ro quan trọng:\n\n• Xóa bộ nhớ đệm sẽ xóa lịch sử.\n• Chế độ Ẩn danh xóa dữ liệu khi đóng.\n• Mất điện thoại đồng nghĩa mất dữ liệu (nếu không sao lưu).",
-    "Không đồng bộ đám mây.\n\nXuất: Tải xuống tệp JSON từ Cài đặt.\n\nNhập: Tải lên tệp để khôi phục.",
-    "Sử dụng API Nhận dạng Giọng nói của thiết bị. Dữ liệu xử lý cục bộ. Không ghi âm.",
-    "Untwine không phải thiết bị y tế. Đây là công cụ tự giúp đỡ.\n\nKhẩn cấp: Nếu gặp nguy hiểm, gọi cấp cứu hoặc truy cập https://findahelpline.com/.",
-    "Không (0) tập lệnh theo dõi.\n\n• Không Google Analytics.\n• Không quảng cáo.",
-    "Liên hệ: contact@untwine.app"
-  ),
-  id: createPrivacy(
-    "Kebijakan Privasi",
-    "Pikiran Anda adalah privasi. Tanpa database cloud. Tidak perlu akun.\n\n\"Apa yang terjadi di ponsel Anda, tetap di ponsel Anda.\"",
-    "Kami menggunakan Penyimpanan Lokal. Semuanya disimpan di memori perangkat. Tidak ada data yang keluar dari perangkat.\n\nRisiko Penting:\n\n• Menghapus cache akan menghapus riwayat.\n• Mode Penyamaran menghapus data saat ditutup.\n• Jika ponsel hilang, data hilang (tanpa cadangan manual).",
-    "Tanpa sinkronisasi cloud.\n\nEkspor: Unduh file JSON dari Pengaturan.\n\nImpor: Pulihkan dengan mengunggah file tersebut.",
-    "Menggunakan API Pengenalan Suara perangkat. Diproses secara lokal. Kami tidak merekam audio.",
-    "Untwine bukan alat medis. Ini adalah utilitas swadaya.\n\nKrisis: Jika dalam bahaya, hubungi layanan darurat atau https://findahelpline.com/.",
-    "Nol (0) pelacak.\n\n• Tidak ada Google Analytics.\n• Tidak ada Iklan.",
-    "Hubungi kami: contact@untwine.app"
-  ),
-  th: createPrivacy(
-    "นโยบายความเป็นส่วนตัว",
-    "จิตใจของคุณเป็นเรื่องส่วนตัว ไม่มีฐานข้อมูลคลาวด์ ไม่ต้องมีบัญชี\n\n\"สิ่งที่เกิดขึ้นในโทรศัพท์ของคุณ จะอยู่แค่ในโทรศัพท์ของคุณ\"",
-    "เราใช้ Local Storage ทุกอย่างจะถูกบันทึกลงในหน่วยความจำเครื่อง ข้อมูลจะไม่ถูกส่งออก\n\nความเสี่ยงสำคัญ:\n\n• การล้างแคชจะลบประวัติของคุณ\n• โหมดไม่ระบุตัวตนจะลบข้อมูลเมื่อปิด\n• หากโทรศัพท์หาย ข้อมูลจะหายไป (ถ้าไม่ได้สำรอง)",
-    "ไม่มีการซิงค์คลาวด์\n\nส่งออก: ดาวน์โหลดไฟล์ JSON จากการตั้งค่า\n\nนำเข้า: กู้คืนโดยการอัปโหลดไฟล์นั้น",
-    "ใช้ API การจดจำเสียงของอุปกรณ์ ประมวลผลในเครื่อง เราไม่บันทึกเสียง",
-    "Untwine ไม่ใช่อุปกรณ์ทางการแพทย์ เป็นเครื่องมือช่วยเหลือตนเอง\n\nวิกฤต: หากมีอันตราย โทรแจ้งฉุกเฉินหรือใช้ https://findahelpline.com/",
-    "ศูนย์ (0) ตัวติดตาม\n\n• ไม่มี Google Analytics\n• ไม่มีโฆษณา",
-    "ติดต่อเรา: contact@untwine.app"
-  ),
-  ar: createPrivacy(
-    "سياسة الخصوصية",
-    "مساحتك الذهنية خاصة. لا قاعدة بيانات سحابية. لا حسابات.\n\n\"ما يحدث على هاتفك، يبقى على هاتفك.\"",
-    "نستخدم التخزين المحلي. يتم حفظ كل شيء على ذاكرة جهازك. لا تغادر أي بيانات جهازك.\n\nمخاطر مهمة:\n\n• مسح الذاكرة المؤقتة يمسح السجل.\n• الوضع المتخفي يمسح البيانات عند الإغلاق.\n• فقدان الهاتف يعني فقدان البيانات (بدون نسخ احتياطي).",
-    "لا توجد مزامنة سحابية.\n\nتصدير: قم بتنزيل ملف JSON من الإعدادات.\n\nاستيراد: استعد السجل برفع الملف.",
-    "نستخدم واجهة التعرف على الصوت في جهازك. المعالجة محلية. لا نسجل الصوت.",
-    "Untwine ليس جهازاً طبياً. إنه أداة مساعدة ذاتية.\n\nطوارئ: إذا كنت في خطر، اتصل بالإسعاف أو زر https://findahelpline.com/.",
-    "صفر (0) نصوص تتبع.\n\n• لا Google Analytics.\n• لا إعلانات.",
-    "اتصل بنا: contact@untwine.app"
-  ),
-  he: createPrivacy(
-    "מדיניות פרטיות",
-    "המרחב הנפשי שלך פרטי. אין מסד נתונים בענן. אין צורך בחשבון.\n\n\"מה שקורה בטלפון שלך, נשאר בטלפון שלך.\"",
-    "אנו משתמשים באחסון מקומי. הכל נשמר בזיכרון המכשיר. שום מידע לא יוצא ממנו.\n\nסיכונים חשובים:\n\n• ניקוי מטמון מוחק את ההיסטוריה.\n• מצב אינקוגניטו מוחק נתונים בסגירה.\n• אובדן טלפון משמעו אובדן נתונים (ללא גיבוי ידני).",
-    "אין סנכרון ענן.\n\nייצוא: הורד קובץ JSON מההגדרות.\n\nייבוא: שחזר על ידי העלאת הקובץ.",
-    "אנו משתמשים ב-API לזיהוי דיבור של המכשיר. העיבוד הוא מקומי. איננו מקליטים אודיו.",
-    "Untwine אינה מכשיר רפואי. זהו כלי לעזרה עצמית.\n\nחירום: אם אתה בסכנה, התקשר לשירותי חירום או השתמש ב-https://findahelpline.com/.",
-    "אפס (0) מעקבים.\n\n• אין Google Analytics.\n• אין פרסומות.",
-    "צור קשר: contact@untwine.app"
-  ),
-  hi: createPrivacy(
-    "गोपनीयता नीति",
-    "आपका मानसिक स्थान निजी है। कोई क्लाउड डेटाबेस नहीं। कोई खाता आवश्यक नहीं।\n\n\"जो आपके फोन पर होता है, वह आपके फोन पर रहता है।\"",
-    "हम स्थानीय भंडारण का उपयोग करते हैं। सब कुछ सीधे आपके डिवाइस की मेमोरी में सहेजा जाता है। कोई डेटा बाहर नहीं जाता।\n\nमहत्वपूर्ण जोखिम:\n\n• कैश साफ़ करने से इतिहास मिट जाएगा।\n• गुप्त मोड बंद होने पर डेटा मिटा देता है।\n• फोन खोने पर डेटा खो जाता है (बिना बैकअप के)।",
-    "कोई क्लाउड सिंक नहीं।\n\nनिर्यात: सेटिंग्स से JSON फ़ाइल डाउनलोड करें।\n\nआयात: फ़ाइल अपलोड करके पुनर्स्थापित करें।",
-    "हम डिवाइस के वॉयस रिकग्निशन एपीआई का उपयोग करते हैं। प्रसंस्करण स्थानीय है। हम ऑडियो रिकॉर्ड नहीं करते हैं।",
-    "Untwine एक चिकित्सा उपकरण नहीं है। यह एक स्वयं सहायता उपकरण है।\n\nसंकट: यदि खतरे में हैं, तो आपातकालीन सेवाओं को कॉल करें या https://findahelpline.com/ पर जाएं।",
-    "शून्य (0) ट्रैकिंग।\n\n• कोई Google Analytics नहीं।\n• कोई विज्ञापन नहीं।",
-    "संपर्क करें: contact@untwine.app"
-  ),
-  bn: createPrivacy(
-    "গোপনীয়তা নীতি",
-    "আপনার মানসিক স্থান ব্যক্তিগত। কোন ক্লাউড ডেটাবেস নেই। অ্যাকাউন্টের প্রয়োজন নেই।\n\n\"যা আপনার ফোনে ঘটে, তা আপনার ফোনেই থাকে।\"",
-    "আমরা লোকাল স্টোরেজ ব্যবহার করি। সবকিছু সরাসরি ডিভাইসের মেমোরিতে সেভ হয়। কোন ডেটা ডিভাইস ছেড়ে যায় না।\n\nগুরুত্বপূর্ণ ঝুঁকি:\n\n• ক্যাশ পরিষ্কার করলে ইতিহাস মুছে যাবে।\n• ইনকগনিটো মোড বন্ধ করলে ডেটা মুছে যায়।\n• ফোন হারালে ডেটা হারিয়ে যাবে (ব্যাকআপ ছাড়া)।",
-    "কোন ক্লাউড সিঙ্ক নেই।\n\nরপ্তানি: সেটিংস থেকে JSON ফাইল ডাউনলোড করুন।\n\nআমদানি: ফাইল আপলোড করে পুনরুদ্ধার করুন।",
-    "আমরা ডিভাইসের ভয়েস রিকগনিশন API ব্যবহার করি। প্রক্রিয়াটি স্থানীয়। আমরা অডিও রেকর্ড করি না।",
-    "Untwine কোন চিকিৎসা যন্ত্র নয়। এটি একটি স্ব-সহায়ক টুল।\n\nজরুরী: বিপদে থাকলে, জরুরী সেবায় কল করুন বা https://findahelpline.com/ দেখুন।",
-    "শূন্য (0) ট্র্যাকিং।\n\n• কোন Google Analytics নেই।\n• কোন বিজ্ঞাপন নেই।",
-    "যোগাযোগ: contact@untwine.app"
-  ),
-  fa: createPrivacy(
-    "سیاست حفظ حریم خصوصی",
-    "فضای ذهنی شما خصوصی است. بدون پایگاه داده ابری. بدون نیاز به حساب.\n\n\"آنچه در تلفن شما اتفاق می‌افتد، در تلفن شما می‌ماند.\"",
-    "ما از ذخیره‌سازی محلی استفاده می‌کنیم. همه چیز در حافظه دستگاه ذخیره می‌شود. هیچ داده‌ای خارج نمی‌شود.\n\nخطرات مهم:\n\n• پاک کردن حافظه پنهان تاریخچه را پاک می‌کند.\n• حالت ناشناس هنگام بسته شدن داده‌ها را پاک می‌کند.\n• گم شدن تلفن یعنی از دست دادن داده‌ها (بدون پشتیبان).",
-    "بدون همگام‌سازی ابری.\n\nصادرات: دانلود فایل JSON از تنظیمات.\n\nواردات: بازیابی با آپلود فایل.",
-    "ما از API تشخیص گفتار دستگاه استفاده می‌کنیم. پردازش محلی است. ما صدا را ضبط نمی‌کنیم.",
-    "Untwine یک دستگاه پزشکی نیست. ابزار خودیاری است.\n\nبحران: اگر در خطر هستید، با اورژانس تماس بگیرید یا از https://findahelpline.com/ استفاده کنید.",
-    "صفر (0) ردیاب.\n\n• بدون Google Analytics.\n• بدون تبلیغات.",
-    "تماس: contact@untwine.app"
-  ),
-  uk: createPrivacy(
-    "Політика конфіденційності",
-    "Ваш розум приватний. Немає хмарної бази. Обліковий запис не потрібен.\n\n\"Що відбувається на телефоні, залишається на телефоні.\"",
-    "Ми використовуємо локальне сховище. Все зберігається в пам'яті пристрою. Дані не залишають пристрій.\n\nВажливі ризики:\n\n• Очищення кешу видаляє історію.\n• Режим інкогніто видаляє дані при закритті.\n• Втрата телефону означає втрату даних (без бекапу).",
-    "Немає хмарної синхронізації.\n\nЕкспорт: Завантажте JSON-файл у Налаштуваннях.\n\nІмпорт: Відновіть історію, завантаживши файл.",
-    "Ми використовуємо API розпізнавання мови пристрою. Обробка локальна. Ми не записуємо аудіо.",
-    "Untwine не є медичним пристроєм. Це інструмент самодопомоги.\n\nКриза: Якщо ви в небезпеці, дзвоніть в екстрені служби або відвідайте https://findahelpline.com/.",
-    "Нуль (0) трекерів.\n\n• Немає Google Analytics.\n• Немає реклами.",
-    "Контакти: contact@untwine.app"
-  ),
-  tl: createPrivacy(
-    "Patakaran sa Privacy",
-    "Pribado ang iyong isip. Walang cloud database. Hindi kailangan ng account.\n\n\"Kung ano ang nasa telepono mo, mananatili sa telepono mo.\"",
-    "Gumagamit kami ng Local Storage. Ang lahat ay naka-save sa memorya ng device. Walang data na lumalabas.\n\nMahahalagang Panganib:\n\n• Ang pag-clear ng cache ay magbubura ng history.\n• Ang Incognito mode ay nagbubura ng data kapag isinara.\n• Kung mawala ang telepono, mawawala ang data (maliban kung may backup).",
-    "Walang cloud sync.\n\nExport: Mag-download ng JSON file mula sa Settings.\n\nImport: I-restore sa pamamagitan ng pag-upload ng file.",
-    "Ginagamit namin ang Speech Recognition API ng device. Lokal ang pagproseso. Hindi kami nagre-record ng audio.",
-    "Ang Untwine ay hindi medikal na device. Ito ay tool sa self-help.\n\nKrisis: Kung nasa panganib, tumawag sa emergency o gamitin ang https://findahelpline.com/.",
-    "Zero (0) tracking scripts.\n\n• Walang Google Analytics.\n• Walang Ads.",
-    "Makipag-ugnayan: contact@untwine.app"
-  )
+  fr: createPrivacy("Politique de Confidentialité Untwine", "Votre espace mental est privé. Pas de cloud.", "Stockage local sur votre appareil.\nRisques : Vider le cache efface l'historique.", "Pas de synchronisation cloud.\nExportez/Importez via les Paramètres.", "Traitement vocal local. Pas d'enregistrement.", "Pas un dispositif médical.\nCrise : https://findahelpline.com/", "Zéro traceur. Pas de pub.", "contact@untwine.app"),
+  de: createPrivacy("Datenschutzerklärung", "Dein geistiger Raum ist privat. Keine Cloud.", "Lokaler Speicher.\nRisiko: Cache leeren löscht Daten.", "Kein Cloud-Sync.\nExport/Import in Einstellungen.", "Sprache lokal verarbeitet.", "Kein Medizinprodukt.\nKrise: https://findahelpline.com/", "Kein Tracking. Keine Werbung.", "contact@untwine.app"),
+  it: createPrivacy("Informativa Privacy", "Spazio privato. No cloud.", "Memoria Locale.\nRischio: Cancellare cache cancella dati.", "No sync cloud.\nExport/Import nelle Impostazioni.", "Voce elaborata localmente.", "Non medico.\nCrisi: https://findahelpline.com/", "Zero tracciamento. No pubblicità.", "contact@untwine.app"),
+  pt: createPrivacy("Política de Privacidade", "Espaço privado. Sem nuvem.", "Armazenamento Local.\nRisco: Limpar cache apaga dados.", "Sem sync nuvem.\nExportar/Importar em Configurações.", "Voz processada localmente.", "Não é médico.\nCrise: https://findahelpline.com/", "Zero rastreio. Sem anúncios.", "contact@untwine.app"),
+  nl: createPrivacy("Privacybeleid", "Privéruimte. Geen cloud.", "Lokale Opslag.\nRisico: Cache wissen wist data.", "Geen cloud-sync.\nExport/Import via Instellingen.", "Stem lokaal verwerkt.", "Geen medisch apparaat.\nCrisis: https://findahelpline.com/", "Geen tracking. Geen ads.", "contact@untwine.app"),
+  sv: createPrivacy("Integritetspolicy", "Ditt sinne är privat. Inget moln.", "Lokal lagring.\nRisk: Rensa cache raderar data.", "Ingen molnsynk.\nExport/Import via Inställningar.", "Röst behandlas lokalt.", "Ej medicinskt.\nKris: https://findahelpline.com/", "Ingen spårning. Inga annonser.", "contact@untwine.app"),
+  pl: createPrivacy("Polityka Prywatności", "Prywatna przestrzeń. Brak chmury.", "Pamięć lokalna.\nRyzyko: Czyszczenie pamięci usuwa dane.", "Brak sync chmury.\nEksport/Import w Ustawieniach.", "Głos przetwarzany lokalnie.", "Nie medyczne.\nKryzys: https://findahelpline.com/", "Zero śledzenia. Brak reklam.", "contact@untwine.app"),
+  el: createPrivacy("Πολιτική Απορρήτου", "Ιδιωτικός χώρος. Όχι σύννεφο.", "Τοπική Αποθήκευση.\nΚίνδυνος: Η εκκαθάριση διαγράφει δεδομένα.", "Όχι συγχρονισμός.\nΕξαγωγή/Εισαγωγή στις Ρυθμίσεις.", "Φωνή επεξεργάζεται τοπικά.", "Όχι ιατρικό.\nΚρίση: https://findahelpline.com/", "Μηδέν ιχνηλάτες. Όχι διαφημίσεις.", "contact@untwine.app"),
+  tr: createPrivacy("Gizlilik Politikası", "Özel alan. Bulut yok.", "Yerel Depolama.\nRisk: Önbellek temizleme verileri siler.", "Bulut senk yok.\nAyarlardan Dışa/İçe Aktar.", "Ses yerel işlenir.", "Tıbbi cihaz değil.\nKriz: https://findahelpline.com/", "İzleme yok. Reklam yok.", "contact@untwine.app"),
+  ru: createPrivacy("Конфиденциальность", "Личное пространство. Нет облака.", "Локальное хранение.\nРиск: Очистка кэша удаляет данные.", "Нет синхронизации.\nЭкспорт/Импорт в Настройках.", "Голос обрабатывается локально.", "Не медицинское.\nКризис: https://findahelpline.com/", "Нет трекеров. Нет рекламы.", "contact@untwine.app"),
+  zh: createPrivacy("隐私政策", "私密空间。无云端。", "本地存储。\n风险：清除缓存会删除数据。", "无云同步。\n设置中导出/导入。", "语音本地处理。", "非医疗设备。\n危机：https://findahelpline.com/", "无追踪。无广告。", "contact@untwine.app"),
+  ja: createPrivacy("プライバシーポリシー", "プライベート空間。クラウドなし。", "ローカル保存。\nリスク：キャッシュ消去でデータ消失。", "同期なし。\n設定からエクスポート/インポート。", "音声はローカル処理。", "医療機器ではありません。\n危機時：https://findahelpline.com/", "追跡なし。広告なし。", "contact@untwine.app"),
+  ko: createPrivacy("개인정보 처리방침", "사적인 공간. 클라우드 없음.", "로컬 저장.\n위험: 캐시 삭제 시 데이터 삭제.", "클라우드 동기화 없음.\n설정에서 내보내기/가져오기.", "음성 로컬 처리.", "의료 기기 아님.\n위기 시: https://findahelpline.com/", "추적 없음. 광고 없음.", "contact@untwine.app"),
+  vi: createPrivacy("Chính sách bảo mật", "Không gian riêng tư. Không đám mây.", "Lưu trữ cục bộ.\nRủi ro: Xóa cache mất dữ liệu.", "Không đồng bộ đám mây.\nXuất/Nhập trong Cài đặt.", "Giọng nói xử lý cục bộ.", "Không phải y tế.\nKhẩn cấp: https://findahelpline.com/", "Không theo dõi. Không quảng cáo.", "contact@untwine.app"),
+  id: createPrivacy("Kebijakan Privasi", "Ruang pribadi. Tanpa cloud.", "Penyimpanan Lokal.\nRisiko: Hapus cache menghapus data.", "Tanpa sinkronisasi cloud.\nEkspor/Impor di Pengaturan.", "Suara diproses lokal.", "Bukan medis.\nKrisis: https://findahelpline.com/", "Tanpa pelacak. Tanpa iklan.", "contact@untwine.app"),
+  th: createPrivacy("นโยบายความเป็นส่วนตัว", "พื้นที่ส่วนตัว ไม่มีคลาวด์", "จัดเก็บในเครื่อง\nความเสี่ยง: ล้างแคชข้อมูลหาย", "ไม่มีการซิงค์\nส่งออก/นำเข้าในการตั้งค่า", "ประมวลผลเสียงในเครื่อง", "ไม่ใช่อุปกรณ์การแพทย์\nฉุกเฉิน: https://findahelpline.com/", "ไม่มีการติดตาม ไม่มีโฆษณา", "contact@untwine.app"),
+  ar: createPrivacy("سياسة الخصوصية", "مساحة خاصة. لا سحابة.", "تخزين محلي.\nخطر: مسح الذاكرة يحذف البيانات.", "لا تزامن سحابي.\nتصدير/استيراد من الإعدادات.", "صوت يعالج محلياً.", "ليس طبياً.\nطوارئ: https://findahelpline.com/", "لا تتبع. لا إعلانات.", "contact@untwine.app"),
+  he: createPrivacy("מדיניות פרטיות", "מרחב פרטי. אין ענן.", "אחסון מקומי.\nסיכון: ניקוי מטמון מוחק נתונים.", "אין סנכרון ענן.\nייצוא/ייבוא בהגדרות.", "קול מעובד מקומית.", "לא רפואי.\nחירום: https://findahelpline.com/", "ללא מעקב. ללא פרסומות.", "contact@untwine.app"),
+  hi: createPrivacy("गोपनीयता नीति", "निजी स्थान। कोई क्लाउड नहीं।", "स्थानीय भंडारण।\nजोखिम: कैश साफ़ करने से डेटा मिट जाता है।", "कोई क्लाउड सिंक नहीं।\nसेटिंग्स में निर्यात/आयात।", "आवाज स्थानीय रूप से संसाधित।", "चिकित्सा नहीं।\nसंकट: https://findahelpline.com/", "कोई ट्रैकिंग नहीं। कोई विज्ञापन नहीं।", "contact@untwine.app"),
+  bn: createPrivacy("গোপনীয়তা নীতি", "ব্যক্তিগত স্থান। কোন ক্লাউড নেই।", "স্থানীয় স্টোরেজ।\nঝুঁকি: ক্যাশ পরিষ্কার করলে ডেটা মুছে যায়।", "কোন ক্লাউড সিঙ্ক নেই।\nসেটিংসে রপ্তানি/আমদানি।", "ভয়েস স্থানীয়ভাবে প্রক্রিয়া করা হয়।", "চিকিৎসা নয়।\nজরুরী: https://findahelpline.com/", "কোন ট্র্যাকিং নেই। কোন বিজ্ঞাপন নেই।", "contact@untwine.app"),
+  fa: createPrivacy("سیاست حفظ حریم خصوصی", "فضای خصوصی. بدون ابر.", "ذخیره‌سازی محلی.\nخطر: پاک کردن حافظه پنهان داده‌ها را پاک می‌کند.", "بدون همگام‌سازی ابری.\nصادرات/واردات در تنظیمات.", "پردازش صوتی محلی.", "پزشکی نیست.\nبحران: https://findahelpline.com/", "بدون ردیابی. بدون تبلیغات.", "contact@untwine.app"),
+  uk: createPrivacy("Політика конфіденційності", "Приватний простір. Без хмари.", "Локальне сховище.\nРизик: Очищення кешу видаляє дані.", "Без хмарної синхронізації.\nЕкспорт/Імпорт в Налаштуваннях.", "Голос обробляється локально.", "Не медичне.\nКриза: https://findahelpline.com/", "Без трекерів. Без реклами.", "contact@untwine.app"),
+  tl: createPrivacy("Patakaran sa Privacy", "Pribadong espasyo. Walang cloud.", "Lokal na Storage.\nPanganib: Ang pag-clear ng cache ay nagbubura ng data.", "Walang cloud sync.\nI-export/I-import sa Mga Setting.", "Lokal na pinoproseso ang boses.", "Hindi medikal.\nKrisis: https://findahelpline.com/", "Walang tracking. Walang Ads.", "contact@untwine.app")
 };
 
 const LANGUAGES = {
@@ -311,7 +98,7 @@ const LANGUAGES = {
   pl: { label: 'Polski (Polish)', dir: 'ltr', tagline: 'Sanktuarium.', modes: { calm: 'Uspokój', stop: 'Zatrzymaj Myśli', decide: 'Decyzja', ground: 'Uziemienie' }, overthinking: { step1: "Myślisz o najgorszym...", step2: "Spójrz na dobre.", step3_prompts: ["Jeśli się uda?"], step4_input: "Głos/Tekst", step5: "Pamiętaj, że to możliwe.", btn_speak: "Mów", btn_listening: "Słucham...", btn_clear: "Wyczyść" }, grounding: { prompt: "Reset", steps: ["5 widzisz", "4 czujesz", "3 słyszysz", "2 wąchasz", "1 smakujesz"], instruction: "Nazwij.", breathing: "Oddychaj." }, decision: { title: "Decyzja", opt1: "A", opt2: "B", flip: "Rzuć", result: "Moneta:", gut: "Jeśli żałujesz, zmień.", reflip: "Znów" }, calm: { inhale: "Wdech", hold: "Trzymaj", exhale: "Wydech" }, common: { next: "Dalej", done: "Gotowe", good: "Ok.", landing_btn: "Otwórz", install_guide: "Instaluj", settings: "Ustawienia", language: "Język", clear_data: "Wyczyść", backup: "Kopia", restore: "Przywróć", privacy: "Prywatność" } },
   el: { label: 'Ελληνικά (Greek)', dir: 'ltr', tagline: 'Καταφύγιο.', modes: { calm: 'Ηρέμησε', stop: 'Σταμάτα Σκέψη', decide: 'Απόφαση', ground: 'Γείωση' }, overthinking: { step1: "Φαντάζεσαι το χειρότερο...", step2: "Δες το καλό.", step3_prompts: ["Αν πάει καλά;"], step4_input: "Φωνή/Κείμενο", step5: "Θυμήσου ότι μπορεί.", btn_speak: "Μίλα", btn_listening: "Ακούω...", btn_clear: "Καθαρισμός" }, grounding: { prompt: "Επαναφορά", steps: ["5 βλέπεις", "4 νιώθεις", "3 ακούς", "2 μυρίζεις", "1 γεύεσαι"], instruction: "Πες τα.", breathing: "Ανάπνευσε." }, decision: { title: "Απόφαση", opt1: "Α", opt2: "Β", flip: "Ρίξε", result: "Νόμισμα:", gut: "Αν απογοητεύτηκες, άλλαξε.", reflip: "Ξανά" }, calm: { inhale: "Εισπνοή", hold: "Κράτα", exhale: "Εκπνοή" }, common: { next: "Επόμενο", done: "Τέλος", good: "Εντάξει.", landing_btn: "Άνοιγμα", install_guide: "Εγκατάσταση", settings: "Ρυθμίσεις", language: "Γλώσσα", clear_data: "Διαγραφή", backup: "Αντίγραφο", restore: "Επαναφορά", privacy: "Απόρρητο" } },
   tr: { label: 'Türkçe (Turkish)', dir: 'ltr', tagline: 'Sığınak.', modes: { calm: 'Sakinleş', stop: 'Düşünme', decide: 'Karar', ground: 'Topraklan' }, overthinking: { step1: "En kötüyü düşünüyorsun...", step2: "İyiye bak.", step3_prompts: ["Ya iyi giderse?"], step4_input: "Ses/Metin", step5: "Mümkün olduğunu hatırla.", btn_speak: "Konuş", btn_listening: "Dinliyor...", btn_clear: "Temizle" }, grounding: { prompt: "Sıfırla", steps: ["5 gör", "4 hisset", "3 duy", "2 kokla", "1 tat"], instruction: "Söyle.", breathing: "Nefes al." }, decision: { title: "Karar", opt1: "A", opt2: "B", flip: "At", result: "Para:", gut: "Üzgünsen değiştir.", reflip: "Tekrar" }, calm: { inhale: "Al", hold: "Tut", exhale: "Ver" }, common: { next: "İleri", done: "Bitti", good: "Tamam.", landing_btn: "Aç", install_guide: "Yükle", settings: "Ayarlar", language: "Dil", clear_data: "Temizle", backup: "Yedekle", restore: "Yükle", privacy: "Gizlilik" } },
-  ru: { label: 'Русский (Russian)', dir: 'ltr', tagline: 'Убежище.', modes: { calm: 'Успокойся', stop: 'Стоп Мысли', decide: 'Решение', ground: 'Заземление' }, overthinking: { step1: "Думаешь о плохом...", step2: "Подумай о хорошем.", step3_prompts: ["Если все получится?"], step4_input: "Голос/Текст", step5: "Помни, это возможно.", btn_speak: "Говорить", btn_listening: "Слушаю...", btn_clear: "Стереть" }, grounding: { prompt: "Сброс", steps: ["5 видишь", "4 чувствуешь", "3 слышишь", "2 чуешь", "1 вкус"], instruction: "Назови.", breathing: "Дыши." }, decision: { title: "Решение", opt1: "А", opt2: "Б", flip: "Бросить", result: "Монета:", gut: "Если жаль, меняй.", reflip: "Снова" }, calm: { inhale: "Вдох", hold: "Держи", exhale: "Выдох" }, common: { next: "Далее", done: "Готово", good: "Ок.", landing_btn: "Открыть", install_guide: "Установить", settings: "Настройки", language: "Язык", clear_data: "Стереть", backup: "Бэкап", restore: "Восст.", privacy: "Приватность" } },
+  ru: { label: 'Русский (Russian)', dir: 'ltr', tagline: 'Убежище.', modes: { calm: 'Успокойся', stop: 'Стоп Мысли', decide: 'Решение', ground: 'Заземление' }, overthinking: { step1: "Думаешь о плохом...", step2: "Подумай о хорошем.", step3_prompts: ["Если все получится?"], step4_input: "Голос/Текст", step5: "Помни, это возможно.", btn_speak: "Говорить", btn_listening: "Слушаю...", btn_clear: "Стереть" }, grounding: { prompt: "Сброс", steps: ["5 видишь", "4 чувствуешь", "3 слышишь", "2 чуешь", "1 вкус"], instruction: "Назови.", breathing: "Дыши." }, decision: { title: "Решение", opt1: "А", opt2: "B", flip: "Бросить", result: "Монета:", gut: "Если жаль, меняй.", reflip: "Снова" }, calm: { inhale: "Вдох", hold: "Держи", exhale: "Выдох" }, common: { next: "Далее", done: "Готово", good: "Ок.", landing_btn: "Открыть", install_guide: "Установить", settings: "Настройки", language: "Язык", clear_data: "Стереть", backup: "Бэкап", restore: "Восст.", privacy: "Приватность" } },
   zh: { label: '中文 (Chinese)', dir: 'ltr', tagline: '避风港。', modes: { calm: '冷静', stop: '停止思考', decide: '决定', ground: '落地' }, overthinking: { step1: "你在想最坏的情况...", step2: "看看好的方面。", step3_prompts: ["如果顺利呢？"], step4_input: "语音/文字", step5: "记住这是可能的。", btn_speak: "说", btn_listening: "听...", btn_clear: "清除" }, grounding: { prompt: "重置", steps: ["5看", "4感", "3听", "2闻", "1尝"], instruction: "命名。", breathing: "呼吸。" }, decision: { title: "决定", opt1: "A", opt2: "B", flip: "抛", result: "结果:", gut: "失望就换。", reflip: "重抛" }, calm: { inhale: "吸", hold: "屏", exhale: "呼" }, common: { next: "下", done: "完", good: "好。", landing_btn: "打开", install_guide: "安装", settings: "设置", language: "语言", clear_data: "清除", backup: "备份", restore: "恢复", privacy: "隐私" } },
   ja: { label: '日本語 (Japanese)', dir: 'ltr', tagline: '聖域。', modes: { calm: '冷静', stop: '思考停止', decide: '決断', ground: '接地' }, overthinking: { step1: "最悪を想像しています...", step2: "良い面を見よう。", step3_prompts: ["うまくいったら？"], step4_input: "声/文字", step5: "可能性を覚えておいて。", btn_speak: "話す", btn_listening: "聞いています...", btn_clear: "消去" }, grounding: { prompt: "リセット", steps: ["5視", "4触", "3聴", "2嗅", "1味"], instruction: "名前を。", breathing: "呼吸。" }, decision: { title: "決断", opt1: "A", opt2: "B", flip: "投げる", result: "結果:", gut: "失望なら変えて。", reflip: "再度" }, calm: { inhale: "吸", hold: "止", exhale: "吐" }, common: { next: "次", done: "完", good: "良し。", landing_btn: "開く", install_guide: "設置", settings: "設定", language: "言語", clear_data: "消去", backup: "保存", restore: "復元", privacy: "プライバシー" } },
   ko: { label: '한국어 (Korean)', dir: 'ltr', tagline: '안식처.', modes: { calm: '진정', stop: '생각 중지', decide: '결정', ground: '그라운딩' }, overthinking: { step1: "최악을 상상하네요...", step2: "좋은 쪽을 봐요.", step3_prompts: ["잘 된다면?"], step4_input: "음성/텍스트", step5: "가능성을 기억해요.", btn_speak: "말하기", btn_listening: "듣는 중...", btn_clear: "지우기" }, grounding: { prompt: "리셋", steps: ["5 봄", "4 느낌", "3 들림", "2 냄새", "1 맛"], instruction: "말해요.", breathing: "호흡." }, decision: { title: "결정", opt1: "A", opt2: "B", flip: "던지기", result: "결과:", gut: "실망하면 바꿔요.", reflip: "다시" }, calm: { inhale: "들이마심", hold: "멈춤", exhale: "내뱉음" }, common: { next: "다음", done: "완료", good: "좋아요.", landing_btn: "열기", install_guide: "설치", settings: "설정", language: "언어", clear_data: "삭제", backup: "백업", restore: "복원", privacy: "개인정보" } },
@@ -682,7 +469,7 @@ const StopOverthinkingMode = ({ lang, onExit, onSave }) => {
     </FadeIn></div>,
     <div key="s4" className="flex flex-col h-full justify-center text-center p-6"><FadeIn><div className="w-16 h-16 rounded-full bg-[#9FAF95]/10 flex items-center justify-center mx-auto mb-6 text-[#9FAF95]"><Check size={32} /></div><h2 className="text-xl md:text-2xl font-light text-[#E6E8E2] leading-relaxed mb-12 whitespace-pre-wrap">{t('overthinking.step5')}</h2><Button variant="outline" onClick={onExit} dir={dir}>{t('common.landing_btn')}</Button></FadeIn></div>
   ];
-  return <div className="h-full relative overflow-y-auto">{step < 3 && (<button onClick={onExit} className={`absolute top-6 z-10 text-[#6F7A6A] ${dir === 'rtl' ? 'right-6' : 'left-6'}`}><X size={28} /></button>)}{steps[step]}</div>;
+  return <div className="h-full relative overflow-y-auto no-scrollbar">{step < 3 && (<button onClick={onExit} className={`absolute top-6 z-10 text-[#6F7A6A] ${dir === 'rtl' ? 'right-6' : 'left-6'}`}><X size={28} /></button>)}{steps[step]}</div>;
 };
 
 const GroundMode = ({ lang, onExit }) => {
@@ -721,7 +508,7 @@ const GroundMode = ({ lang, onExit }) => {
   const handleNext = () => { setText(''); setIsListening(false); recognitionRef.current?.stop(); if (currentStep < 4) setCurrentStep(s => s + 1); else onExit(); };
 
   return (
-    <div className="h-full flex flex-col p-6 pt-12 overflow-y-auto">
+    <div className="h-full flex flex-col p-6 pt-12 overflow-y-auto no-scrollbar">
        <button onClick={onExit} className={`absolute top-6 z-10 text-[#6F7A6A] ${dir === 'rtl' ? 'right-6' : 'left-6'}`}><X size={28} /></button>
        <FadeIn key={currentStep} className="flex-1 flex flex-col">
          <div className="mb-2"><span className="text-[#9FAF95] text-6xl font-light opacity-20">{5 - currentStep}</span></div>
@@ -760,7 +547,7 @@ const HelpMeDecideMode = ({ lang, onExit }) => {
   };
 
   return (
-    <div className="h-full flex flex-col p-6 pt-12 overflow-y-auto">
+    <div className="h-full flex flex-col p-6 pt-12 overflow-y-auto no-scrollbar">
        <button onClick={onExit} className={`absolute top-6 z-10 text-[#6F7A6A] ${dir === 'rtl' ? 'right-6' : 'left-6'}`}><X size={28} /></button>
        {!result ? (
          <FadeIn className="h-full flex flex-col justify-center">
@@ -795,7 +582,7 @@ const PrivacyModal = ({ lang, onClose }) => {
         <h2 className="text-[#E6E8E2] text-xl font-light">{content.title}</h2>
         <button onClick={onClose} className="p-2 -mr-2 text-[#6F7A6A] hover:text-[#E6E8E2]"><X size={24}/></button>
       </div>
-      <div className="flex-1 overflow-y-auto p-6 custom-scrollbar pb-safe">
+      <div className="flex-1 overflow-y-auto p-6 custom-scrollbar pb-safe no-scrollbar">
         <div className="space-y-12 max-w-2xl mx-auto">
           {content.sections.map((section, index) => (
             <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
@@ -836,13 +623,13 @@ const SettingsModal = ({ lang, setLang, onClose, onClear, history, onOpenPrivacy
         
         <div className="flex justify-between items-center mb-8 shrink-0">
           <div className="flex items-center space-x-3">
-            <img src="image1-removebg-preview.png" alt="Untwine" className="w-14 h-14 object-contain" />
+            <img src="image1-removebg-preview.png" alt="Untwine" className="w-12 h-12 object-contain" />
             <h2 className="text-[#E6E8E2] text-xl font-bold">{t('common.settings')}</h2>
           </div>
           <button onClick={onClose}><X className="text-[#6F7A6A]" /></button>
         </div>
 
-        <div className="flex-1 overflow-y-auto pr-2 pb-20 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto pr-2 pb-20 custom-scrollbar no-scrollbar">
           <div className="mb-8">
             <label className="block text-[#6F7A6A] text-sm uppercase tracking-wider mb-4 flex items-center"><Globe size={16} className={dir === 'rtl' ? 'ml-2' : 'mr-2'} />{t('common.language')}</label>
             <div className="relative">
@@ -867,9 +654,6 @@ const SettingsModal = ({ lang, setLang, onClose, onClear, history, onOpenPrivacy
                <br/><br/>
                Contact us at <a href="mailto:contact@untwine.app" className="hover:text-[#9FAF95] transition-colors">contact@untwine.app</a>
              </p>
-             <div className="flex justify-center mt-8 opacity-40">
-                <img src="image1-removebg-preview.png" alt="Untwine Logo" className="w-20 h-20 object-contain" />
-             </div>
           </div>
         </div>
       </div>
@@ -893,7 +677,7 @@ const Dashboard = ({ lang, setView, openSettings }) => {
         <div className="flex items-center space-x-3"><img src="image1-removebg-preview.png" alt="Untwine" className="w-14 h-14 object-contain" /><span className="text-[#E6E8E2] text-lg font-medium tracking-wide">Untwine</span></div>
         <button onClick={openSettings} className="p-2 text-[#6F7A6A] hover:text-[#9FAF95] transition-colors"><Settings size={22} /></button>
       </header>
-      <main className="flex-1 flex flex-col space-y-4 overflow-y-auto custom-scrollbar pb-6">
+      <main className="flex-1 flex flex-col space-y-4 overflow-y-auto custom-scrollbar pb-6 no-scrollbar">
         {modes.map((mode) => (
           <button key={mode.id} onClick={() => setView(mode.id)} className={`w-full p-6 rounded-2xl flex items-center justify-between group transition-all duration-300 touch-manipulation min-h-[5rem] flex-shrink-0 ${mode.primary ? 'bg-[#3A453D] border-2 border-[#9FAF95]/20 shadow-lg' : 'bg-[#3A453D]/50 border border-transparent hover:bg-[#3A453D]'}`}>
             <div className="flex items-center"><div className={`p-3 rounded-full ${dir === 'rtl' ? 'ml-4' : 'mr-4'} ${mode.primary ? 'bg-[#9FAF95]/20 text-[#9FAF95]' : 'bg-[#2F3A32] text-[#6F7A6A] group-hover:text-[#9FAF95]'}`}><mode.icon size={24} /></div><span className={`text-lg font-medium ${mode.primary ? 'text-[#E6E8E2]' : 'text-[#E6E8E2]/80'}`}>{mode.label}</span></div>
@@ -949,7 +733,7 @@ export default function UntwineApp() {
       `}</style>
       
       {isLanding ? (
-        <div className="w-full h-full overflow-y-auto"><WebsiteLanding onEnter={enterApp} /></div>
+        <div className="w-full h-full overflow-y-auto no-scrollbar"><WebsiteLanding onEnter={enterApp} /></div>
       ) : (
         <div className="w-full h-full relative shadow-2xl bg-[#2F3A32] overflow-hidden transition-all duration-300">
           {view === 'home' && <Dashboard lang={lang} setView={setView} openSettings={() => setShowSettings(true)} />}
